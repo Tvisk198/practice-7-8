@@ -1,0 +1,94 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.main-page {
+  background-color: #f8f9fa;
+}
+
+.example-card {
+  transition: 0.3s;
+}
+
+.example-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.demo-box {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 25px;
+  min-height: 180px;
+  text-align: center;
+}
+
+.demo-box h3 {
+  margin-bottom: 15px;
+}
+
+.portfolio-header {
+  background: linear-gradient(135deg, #212529, #343a40);
+  padding: 130px 0 80px;
+}
+
+.portfolio-header h1 {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.portfolio-header p {
+  font-size: 20px;
+}
+
+.profile-photo {
+  max-width: 260px;
+  border: 5px solid #f8f9fa;
+}
+
+section h2,
+section h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card {
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+footer {
+  margin-top: 0;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+code {
+  font-size: 90%;
+}
+
+@media (max-width: 768px) {
+  .portfolio-header h1 {
+    font-size: 32px;
+  }
+
+  .portfolio-header p {
+    font-size: 16px;
+  }
+
+  .profile-photo {
+    max-width: 200px;
+  }
+}

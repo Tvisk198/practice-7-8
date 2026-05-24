@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Приклад 2 - Контейнери Bootstrap</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">← Назад до прикладів ПР7</a>
+    </div>
+  </nav>
+
+  <header class="bg-light text-center py-5">
+    <div class="container">
+      <h1>Контейнери Bootstrap</h1>
+      <p class="lead">
+        Порівняння класів <strong>.container</strong> та <strong>.container-fluid</strong>
+      </p>
+    </div>
+  </header>
+
+  <main class="mb-5">
+
+    <div class="container p-3 my-3 border bg-white">
+      <h2>Звичайний контейнер</h2>
+      <p>
+        Клас <strong>.container</strong> створює адаптивний контейнер
+        з фіксованою максимальною шириною. Такий контейнер центрує вміст
+        сторінки та додає стандартні бокові відступи.
+      </p>
+    </div>
+
+    <div class="container p-3 my-3 bg-dark text-white">
+      <h2>Темний контейнер</h2>
+      <p>
+        У цьому прикладі використано класи <strong>bg-dark</strong>
+        і <strong>text-white</strong>. Вони задають темний фон і білий текст.
+      </p>
+    </div>
+
+    <div class="container p-3 my-3 bg-primary text-white">
+      <h2>Синій контейнер</h2>
+      <p>
+        Клас <strong>bg-primary</strong> задає основний синій колір Bootstrap.
+        Такі службові класи дозволяють швидко змінювати зовнішній вигляд блоків.
+      </p>
+    </div>
+
+    <div class="container-fluid p-3 my-3 bg-secondary text-white">
+      <h2>Контейнер на всю ширину</h2>
+      <p>
+        Клас <strong>.container-fluid</strong> розтягує блок на всю ширину екрана.
+        Його часто використовують для широких секцій, банерів, шапок сайту або підвалу.
+      </p>
+    </div>
+
+    <div class="container mt-5">
+      <div class="alert alert-info">
+        <h4>Висновок</h4>
+        <p class="mb-0">
+          Якщо потрібно акуратно розмістити контент по центру сторінки -
+          використовується <strong>.container</strong>. Якщо потрібно зробити блок
+          на всю ширину екрана - використовується <strong>.container-fluid</strong>.
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>

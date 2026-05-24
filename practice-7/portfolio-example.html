@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Сайт-візитка - Тарасюк В.В.</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+    
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #0f172a;
+      color: #cbd5e1;
+    }
+    
+    /* Glassmorphism Navbar */
+    .navbar {
+      background: rgba(15, 23, 42, 0.8) !important;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Gradient Header */
+    .portfolio-header {
+      background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      padding: 120px 0 80px;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+    }
+    
+    .portfolio-header h1 {
+      font-weight: 800;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    /* Section styling */
+    section {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .bg-light {
+      background-color: #1e293b !important;
+    }
+    
+    /* Cards */
+    .card {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      border-radius: 15px;
+      color: #f8fafc;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+      border-color: rgba(139, 92, 246, 0.5);
+    }
+    
+    .card-body {
+      color: #cbd5e1;
+    }
+    
+    .card-title {
+      color: #f8fafc;
+      font-weight: 600;
+    }
+    
+    /* Buttons */
+    .btn-primary {
+      background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+      border: none;
+      border-radius: 25px;
+      padding: 10px 25px;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+    }
+    
+    .btn-outline-primary {
+      border-color: #8b5cf6;
+      color: #8b5cf6;
+      border-radius: 25px;
+    }
+    
+    .btn-outline-primary:hover {
+      background: #8b5cf6;
+      border-color: #8b5cf6;
+      color: #fff;
+    }
+    
+    /* Photo */
+    .profile-photo {
+      border: 4px solid #8b5cf6;
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+      transition: transform 0.3s ease;
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+    }
+    
+    .profile-photo:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+    
+    /* Form inputs */
+    .form-control {
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+    
+    .form-control:focus {
+      background: rgba(15, 23, 42, 0.8);
+      border-color: #8b5cf6;
+      color: #fff;
+      box-shadow: 0 0 0 0.2rem rgba(139, 92, 246, 0.25);
+    }
+    
+    /* Text */
+    h2, h4 {
+      color: #f8fafc;
+      font-weight: 600;
+    }
+    
+    /* Footer */
+    footer.bg-dark {
+      background-color: #0f172a !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">← До прикладів ПР7</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Про мене</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Навички</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Портфоліо</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contacts">Контакти</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="portfolio-header text-white text-center">
+    <div class="container">
+      <h1>Тарасюк В.В.</h1>
+      <p class="lead">Сайт-візитка</p>
+      <a href="#contacts" class="btn btn-primary">Зв’язатися</a>
+    </div>
+  </header>
+
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+          <img
+            src="photo.jpg"
+            alt="Фото Тарасюка В.В."
+            class="img-fluid rounded-circle profile-photo"
+          >
+        </div>
+
+        <div class="col-md-8">
+          <h2>Про мене</h2>
+          <p>
+            Привіт! Я студент Хмельницького національного університету (ХНУ), навчаюсь за спеціальністю «Комп'ютерна інженерія».
+          </p>
+          <p>
+            Моя мета — стати висококваліфікованим фахівцем у сфері розробки програмного забезпечення. Я постійно вивчаю нові технології, сучасні веб-фреймворки та люблю створювати красиві й зручні інтерфейси. У вільний час експериментую з кодом, читаю технічну літературу і працюю над власними пет-проєктами. Завжди відкритий до нових знань та цікавих задач!
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Навички</h2>
+
+      <div class="row">
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="card text-center h-100">
+            <div class="card-body">
+              <h5 class="card-title">HTML</h5>
+              <p class="card-text">
+                Створення структури вебсторінки за допомогою HTML-тегів.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="card text-center h-100">
+            <div class="card-body">
+              <h5 class="card-title">CSS</h5>
+              <p class="card-text">
+                Оформлення сторінки, робота з кольорами, відступами та шрифтами.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="card text-center h-100">
+            <div class="card-body">
+              <h5 class="card-title">Bootstrap</h5>
+              <p class="card-text">
+                Використання готових класів для швидкої адаптивної верстки.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="card text-center h-100">
+            <div class="card-body">
+              <h5 class="card-title">JavaScript</h5>
+              <p class="card-text">
+                Основи інтерактивності на вебсторінках.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Портфоліо</h2>
+
+      <div class="row">
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img
+              src="project1.jpg"
+              class="card-img-top"
+              alt="Проєкт 1"
+              style="object-fit: cover; height: 250px;"
+            >
+            <div class="card-body">
+              <h5 class="card-title">Проєкт 1</h5>
+              <p class="card-text">
+                Простий сайт-візитка, створений за допомогою HTML, CSS і Bootstrap.
+              </p>
+              <a href="#" class="btn btn-outline-primary">Переглянути</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img
+              src="project2.jpg"
+              class="card-img-top"
+              alt="Проєкт 2"
+              style="object-fit: cover; height: 250px;"
+            >
+            <div class="card-body">
+              <h5 class="card-title">Проєкт 2</h5>
+              <p class="card-text">
+                Адаптивна сторінка з використанням Bootstrap Grid System.
+              </p>
+              <a href="#" class="btn btn-outline-primary">Переглянути</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img
+              src="project3.jpg"
+              class="card-img-top"
+              alt="Проєкт 3"
+              style="object-fit: cover; height: 250px;"
+            >
+            <div class="card-body">
+              <h5 class="card-title">Проєкт 3</h5>
+              <p class="card-text">
+                Макет сторінки-портфоліо з блоками про автора, навички та контакти.
+              </p>
+              <a href="#" class="btn btn-outline-primary">Переглянути</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Контакти</h2>
+
+      <div class="row">
+
+        <div class="col-md-6 mb-4">
+          <h4>Зв’язок</h4>
+          <p><strong>Email:</strong> example@gmail.com</p>
+          <p><strong>Телефон:</strong> +380 00 000 00 00</p>
+          <p><strong>Місто:</strong> Хмельницький</p>
+        </div>
+
+        <div class="col-md-6">
+          <form>
+
+            <div class="form-group">
+              <label for="name">Ваше ім’я</label>
+              <input type="text" class="form-control" id="name" placeholder="Введіть ім’я">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Ваш email</label>
+              <input type="email" class="form-control" id="email" placeholder="Введіть email">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Повідомлення</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Введіть повідомлення"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Надіслати</button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center p-3">
+    <p class="mb-0">
+      © 2026 Сайт-візитка. Створено з використанням Bootstrap.
+    </p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

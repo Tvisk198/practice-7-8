@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Форма GET</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">← Назад до практичної №8</a>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+
+    <h1 class="mb-4">Приклад 5. Форма з методом GET</h1>
+
+    <div class="alert alert-info">
+      Метод <strong>GET</strong> передає дані через адресний рядок браузера.
+      Його зручно використовувати для пошуку, фільтрів або простих запитів.
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+
+        <form action="processing-get.php" method="GET">
+
+          <div class="form-group">
+            <label for="first_name">Ім'я</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Введіть ім'я" required>
+          </div>
+
+          <div class="form-group">
+            <label for="last_name">Прізвище</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Введіть прізвище" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Електронна пошта</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Введіть email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="course">Оберіть курс</label>
+            <select class="form-control" id="course" name="course">
+              <option value="HTML і CSS">HTML і CSS</option>
+              <option value="Bootstrap">Bootstrap</option>
+              <option value="PHP">PHP</option>
+              <option value="JavaScript">JavaScript</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Відправити GET</button>
+
+        </form>
+
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>

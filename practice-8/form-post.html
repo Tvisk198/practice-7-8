@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Форма POST</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">← Назад до практичної №8</a>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+
+    <h1 class="mb-4">Приклад 6. Форма з методом POST</h1>
+
+    <div class="alert alert-info">
+      Метод <strong>POST</strong> передає дані приховано від адресного рядка.
+      Його використовують для форм реєстрації, авторизації, замовлень і заявок.
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+
+        <form action="processing-post.php" method="POST">
+
+          <div class="form-group">
+            <label for="first_name">Ім'я</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Введіть ім'я" required>
+          </div>
+
+          <div class="form-group">
+            <label for="last_name">Прізвище</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Введіть прізвище" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Електронна пошта</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Введіть email" required>
+          </div>
+
+          <div class="form-group">
+            <label>Форма оплати</label>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="payment" id="cash" value="Готівка" checked>
+              <label class="form-check-label" for="cash">
+                Готівка
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="payment" id="card" value="Банківська картка">
+              <label class="form-check-label" for="card">
+                Банківська картка
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="payment" id="online" value="Онлайн-оплата">
+              <label class="form-check-label" for="online">
+                Онлайн-оплата
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="comment">Коментар</label>
+            <textarea class="form-control" id="comment" name="comment" rows="4" placeholder="Введіть коментар"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-success">Відправити POST</button>
+
+        </form>
+
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>
